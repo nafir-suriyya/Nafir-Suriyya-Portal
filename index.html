@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nafir Suriyya Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background-color: #c7e6c3;
+    color: #000;
+    font-family: 'EB Garamond', serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* PAPER GRAIN OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* WATERMARK BACKGROUND IMAGE */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://drive.google.com/uc?export=view&id=1ZiYWdfHUtz2djHOHGTnD5HJs2HQNewMI") center/cover no-repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.username {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* DOUBLE LINES */
+.ashtor {
+    width: 60px;
+    height: 1px;
+    background: #000;
+    margin: 35px auto;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1fr;
+    gap: 60px;
+}
+
+/* LEFT */
+.left {
+    border-right: 2px solid #000;
+    padding-right: 30px;
+}
+
+/* RIGHT */
+.right {
+    border-left: 2px solid #000;
+    padding-left: 50px;
+}
+
+/* LINKS */
+.link {
+    display: block;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* CENTER LINKS */
+.primary-link {
+    display: block;
+    text-align: center;
+    padding: 18px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* ARABIC */
+.arabic {
+    font-family: 'Amiri', serif;
+    text-align: center;
+    direction: rtl;
+    margin-top: 55px;
+    font-size: 1.2rem;
+}
+
+/* FOUNDATION FOOTER */
+.foundation {
+    margin-top: 90px;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.foundation-line {
+    width: 200px;
+    height: 1px;
+    background: #000;
+    margin: 10px auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .left, .right {
+        border: none;
+        padding: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="" alt="Profile Picture">
+        <div class="username">@Nafir_Suriyya</div>
+
+        <div class="ashtor"></div>
+    </div>
+
+    <div class="grid">
+
+        <!-- LEFT -->
+        <div class="left">
+            <a class="link" href="#">Thematic Reels</a>
+            <a class="link" href="#">Political Reels</a>
+            <a class="link" href="#">Eastern Christianity</a>
+            <a class="link" href="#">Cities Series</a>
+        </div>
+
+        <!-- CENTER -->
+        <div class="center">
+            <a class="primary-link" href="https://library.oapen.org/viewer/web/viewer.html?file=/bitstream/handle/20.500.12657/43695/external_content.pdf?sequence=1&isAllowed=y">
+                NAFIR SURIYYA (1860)<br>
+                Complete Document — 11 Clarions
+            </a>
+
+            <a class="primary-link" href="#">
+                Memorandum (Forthcoming)
+            </a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+            <div class="link"><b>Where to start / Sources</b></div>
+
+            <a class="link" href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0239%3Abook%3D16">Strabo — Geography</a>
+            <a class="link" href="https://penelope.uchicago.edu/Thayer/e/roman/texts/strabo/16a*.html">Strabo (Alt)</a>
+            <a class="link" href="https://lexundria.com/hdt/1/mcly">Herodotus — Histories</a>
+            <a class="link" href="https://catalog.archives.gov/id/583">King–Crane Commission</a>
+            <a class="link" href="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/19E%2A.html">Diodorus Siculus</a>
+            <a class="link" href="https://www.utne.com/arts/to-american-immigrants-from-the-middle-east-ze0z1808zpop/">Khalil Gibran</a>
+            <a class="link" href="https://archive.org/details/McGillLibrary-rbsc_isl_arab-awakening_DS636A461939-16015/mode/2up">George Antonius</a>
+        </div>
+
+    </div>
+
+    <!-- ARABIC -->
+    <div class="arabic">
+        النَّفِيرُ السُّورِيُّ<br>
+        ثَقَافَةٌ وَحِرَاكٌ
+    </div>
+
+    <!-- FOUNDATION -->
+    <div class="foundation">
+        <div class="foundation-line"></div>
+        NAFIR SURIYYA ARCHIVAL FOUNDATION<br>
+        EST. 1860 — CONTINUITY OF TEXT & MEMORY
+        <div class="foundation-line"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
