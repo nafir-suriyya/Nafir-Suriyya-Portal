@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Nafir Suriyya Manifesto</title>
 
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 html {
@@ -17,38 +17,65 @@ body {
     line-height: 1.7;
 }
 
-/* main content column */
+/* CONTENT WRAPPER */
 .container {
     max-width: 800px;
     margin: 80px auto;
     padding: 0 20px;
 }
 
-/* title */
+/* HEADER (matches index style) */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* PORTAL TITLE BUTTON */
+.portal-title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.portal-title:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ARABIC SUBTITLE */
+.arabic-header {
+    margin-top: 5px;
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    direction: rtl;
+}
+
+/* TEXT STYLES */
 h1 {
     text-align: center;
 }
 
-/* language toggle */
 .lang-toggle {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* portal button */
-.portal-btn {
-    display: inline-block;
-    margin-bottom: 30px;
-    padding: 10px 18px;
-    text-decoration: none;
-    color: black;
-    border: 1px solid rgba(0,0,0,0.4);
-    background: rgba(255,255,255,0.4);
-    font-weight: 600;
+/* LANGUAGE BUTTONS */
+.lang-toggle button {
+    font-family: 'EB Garamond', serif;
+    padding: 6px 12px;
+    margin: 0 5px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
 }
 
-.portal-btn:hover {
-    background: rgba(255,255,255,0.7);
+/* OPTIONAL: subtle hover */
+.lang-toggle button:hover {
+    background: rgba(0,0,0,0.05);
 }
 </style>
 </head>
@@ -57,80 +84,75 @@ h1 {
 
 <div class="container">
 
-    <a href="index.html" class="portal-btn">Nafir Suriyya Portal</a>
+    <!-- HEADER BUTTON -->
+    <div class="header">
+        <a href="index.html" class="portal-title">Nafir Suriyya Portal</a>
+        <div class="arabic-header">بوَّابَةُ نَفِيرِ سُورِيَّة</div>
+    </div>
 
+    <!-- LANGUAGE TOGGLE -->
     <div class="lang-toggle">
         <button onclick="setLang('en')">English</button>
         <button onclick="setLang('ar')">العربية</button>
     </div>
 
+    <!-- ENGLISH -->
     <div id="en">
         <h1>On Syria as a Continuous Geographic and Civilisational Nation</h1>
 
         <p>
         I. What Syria Means
 
-        By “Syria,” I do not mean only the present-day Syrian Arab Republic on the map. I mean the wider Levant: the eastern Mediterranean lands that have long formed one historical and civilisational field, including Syria, Lebanon, Palestine, Jordan, and adjoining regions within the republics of Turkey and Egypt. The names changed across empires and languages; Syria, Phoenicia, Bilad al-Sham, the Levant. However the underlying region remained recognisable. The point is not merely linguistic. It is that this land has for centuries functioned as one connected world of cities, routes, mountains, coasts, peoples, faiths, and memories.
+        By “Syria,” I do not mean only the present-day Syrian Arab Republic on the map. I mean the wider Levant: the eastern Mediterranean lands that have long formed one historical and civilisational field, including Syria, Lebanon, Palestine, Jordan, and adjoining regions within the republics of Turkey and Egypt. The names changed across empires and languages; Syria, Phoenicia, Bilad al-Sham, the Levant. However the underlying region remained recognisable.
         </p>
 
         <p>
         II. The Long Continuity of the Land
 
-        From antiquity onward, major writers and geographers treated this space as one. Herodotus, Strabo, Josephus, Pliny, al-Muqaddasi, and Yaqut all describe a Syria that includes or surrounds the territories now divided into separate states. Byzantine and early Islamic administrations also retained overlapping territorial frames, showing continuity rather than rupture. This is not a romantic invention of the modern age. It is a historical pattern repeated in texts, maps, and administrative systems over many centuries.
-
-        For this reason, the post-1920 partition of the Levant must be understood as a political rearrangement, not as the natural expression of an ancient national logic. The modern borders followed imperial convenience and mandate planning, not organic historical or geographic unity. The King-Crane Commission found overwhelming support for one independent Syria, while only a small minority asked for Lebanese separation.
+        From antiquity onward, major writers and geographers treated this space as one. Herodotus, Strabo, Josephus, Pliny, al-Muqaddasi, and Yaqut all describe a Syria that includes or surrounds the territories now divided into separate states.
         </p>
 
         <p>
         III. The Modern Syrian Idea
 
-        In the nineteenth century, this older frame reappeared in modern political language. The Nahda and the Mahjar gave it renewed expression through figures such as Butrus al-Bustani, Jurji Zaydan, Gibran Khalil Gibran, George Antonius, and others. Their work did not create identity from nothing; it revived a pre-existing Levantine consciousness.
+        In the nineteenth century, this older frame reappeared in modern political language through the Nahda and Mahjar intellectual movements.
         </p>
 
         <p>
         IV. Why Division Matters
 
-        Fragmentation has weakened institutions, deepened sectarian conflict, and reduced a historically connected region into competing political units. Borders are stable only when states are functional; when they fail, historical unity becomes more visible, not less.
+        Fragmentation has weakened institutions and reduced a historically connected region into competing political units.
         </p>
 
         <p>
         V. What This Movement Demands
 
-        This text argues for a wider Levantine framework that reflects long historical continuity in geography, language, administration, and memory, without erasing modern state realities.
+        This text argues for a wider Levantine framework grounded in historical continuity across geography, language, and memory.
         </p>
     </div>
 
+    <!-- ARABIC -->
     <div id="ar" dir="rtl" style="display:none;">
         <h1>سوريا كدولة جغرافية وحضارية متصلة</h1>
 
         <p>
         أولاً: معنى سوريا
-
-        لا أقصد الجمهورية الحالية فقط، بل بلاد الشام الأوسع...
         </p>
 
         <p>
         ثانياً: الاستمرارية التاريخية
-
-        تعامل المؤرخون القدماء مع المنطقة كوحدة واحدة...
         </p>
 
         <p>
         ثالثاً: الفكرة السورية الحديثة
-
-        أعادت النهضة صياغة الوعي الشامي...
         </p>
 
         <p>
         رابعاً: أثر الانقسام
-
-        أدى التفكك إلى إضعاف البنية السياسية والاجتماعية...
         </p>
 
         <p>
         خامساً: الرؤية
-
-        يدعو النص إلى إطار أوسع يتجاوز التقسيمات الحديثة...
         </p>
     </div>
 
