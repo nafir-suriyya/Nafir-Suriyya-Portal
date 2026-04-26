@@ -18,12 +18,12 @@ body {
 }
 
 .bg {
-    position: relative;
+    position: absolute;
     inset: 0;
     background: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Parchment.00.jpg")
     center/cover no-repeat;
     opacity: 0.4;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
 }
 
@@ -91,6 +91,11 @@ h1 {
 </head>
 
 <body>
+
+<div class="bg">
+    .bg 
+</div>
+
 
 <div class="container">
 
