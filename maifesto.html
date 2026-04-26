@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Nafir Suriyya Manifesto</title>
+
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 body {
     font-family: 'EB Garamond', serif;
@@ -11,27 +13,45 @@ body {
     margin: 80px auto;
     line-height: 1.7;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
+
 h1 {
     text-align: center;
 }
+
+.lang-toggle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Parchment.00.jpg") center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
 </style>
 </head>
+
 <body>
 
-  <div class="lang-toggle">
+<div class="bg"></div>
+
+<div class="lang-toggle">
     <button onclick="setLang('en')">English</button>
     <button onclick="setLang('ar')">العربية</button>
 </div>
-  
-<h1>The Continuity of Syria</h1>
 
-  <div id="en">
+<div id="en">
     <h1>The Continuity of Syria</h1>
     <p>English text here...</p>
 </div>
 
-  <div id="ar" dir="rtl" style="display:none;">
+<div id="ar" dir="rtl" style="display:none;">
     <h1>استمرارية سوريا</h1>
     <p>Arabic translation here...</p>
 </div>
