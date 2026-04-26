@@ -26,6 +26,47 @@ body {
     z-index: 0;
     pointer-events: none;
 }
+
+.gallery-link {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto;
+    text-decoration: none;
+}
+
+.gallery-preview {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-preview img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gallery-preview img.active {
+    opacity: 1;
+}
+
+.gallery-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.4);
+    color: white;
+}
     
 /* CONTAINER */
 .container {
@@ -194,6 +235,15 @@ body {
             <a class="primary-link" href="https://drive.google.com/drive/folders/1bDGs5xKFmvRfmgvvFLUTFcuuu-2MQTFc?usp=sharing">
                 Map Archives (386 Maps Categorised by Publishing Date)
             </a>
+
+            <a href="##" target="_blank" class="gallery-link">
+                    <div class="gallery-preview">
+                        <img src="photo1.jpg" class="active">
+                        <img src="photo2.jpg">
+                        <img src="photo3.jpg">
+                        <div class="gallery-label">Photo Gallery</div>
+                    </div>
+            </a>
             
         </div>
 
@@ -229,6 +279,18 @@ body {
     </div>
 
 </div>
+
+<script>
+const slides = document.querySelectorAll(".gallery-preview img");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
     
 </body>
 </html>
