@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-html {}
+html {height: 100%;}
     
 body {
     margin: 0 auto;
@@ -20,10 +20,19 @@ body {
 
 .bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    /* KEY FIX: make it cover full page height */
+    min-height: 100%;
+
     background: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Parchment.00.jpg")
     center/cover no-repeat;
+
     opacity: 0.4;
+
     z-index: 0;
     pointer-events: none;
 }
@@ -95,9 +104,7 @@ h1 {
 
 <body>
 
-<div class="bg">
-    .bg 
-</div>
+<div class="bg"></div>
 
 
 <div class="container">
