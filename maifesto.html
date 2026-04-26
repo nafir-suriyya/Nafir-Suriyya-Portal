@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nafir Suriyya Manifesto</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    max-width: 800px;
+    margin: 80px auto;
+    line-height: 1.7;
+    padding: 0 20px;
+}
+h1 {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ar')">العربية</button>
+</div>
+  
+<h1>The Continuity of Syria</h1>
+
+  <div id="en">
+    <h1>The Continuity of Syria</h1>
+    <p>English text here...</p>
+</div>
+
+  <div id="ar" dir="rtl" style="display:none;">
+    <h1>استمرارية سوريا</h1>
+    <p>Arabic translation here...</p>
+</div>
+
+<script>
+function setLang(lang) {
+    document.getElementById("en").style.display = (lang === "en") ? "block" : "none";
+    document.getElementById("ar").style.display = (lang === "ar") ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
